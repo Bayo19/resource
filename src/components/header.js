@@ -1,11 +1,11 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
+
 import React from "react"
+import { Link } from "gatsby"
 import headerStyles from './header.module.scss'
 import '../components/SideDrawer/drawerToggleButton'
 import DrawerToggleButton from '../components/SideDrawer/drawerToggleButton'
 
-const Header = (props, { siteTitle }) => (
+const Header = (props) => (
   <header>
         <div className={headerStyles.toolbar}>
         <nav className={headerStyles.toolbarNavigation}>
@@ -34,14 +34,6 @@ const Header = (props, { siteTitle }) => (
                     </div>
         </div>
     </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
+);
 
 export default Header
